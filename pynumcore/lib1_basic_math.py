@@ -5,17 +5,18 @@ will need to rely on. Note that these are NOT user-facing functions, rather, the
 to be math primitives.
 
 Functions contained in this library:
-1. add()
-2. subtract()
-3. multiply()
-4. divide()
-5. power()
-6. root()
-7. absoluteValue()
-8. remainder()
-9. floorDivision()
-10. reciprocal()
-11. percentage()
+1. add() --> Finished
+2. subtract() --> Finished
+3. multiply() --> Finished
+4. divide() --> Finished
+5. power() --> Finished
+6. root() --> Finished
+7. absolute_value() --> Finished
+8. remainder_c1() --> Finished
+9. remainder_c2() --> Finished
+10. floor_division() --> In Progress
+11. reciprocal() --> In Progress
+12. percentage() --> In Progress
 '''
 
 #---------------------------------------------------------------------------------------
