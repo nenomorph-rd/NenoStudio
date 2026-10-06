@@ -14,9 +14,10 @@ Functions contained in this library:
 7. absolute_value() --> Finished
 8. remainder_c1() --> Finished
 9. remainder_c2() --> Finished
-10. floor_division() --> In Progress
-11. reciprocal() --> In Progress
-12. percentage() --> In Progress
+10. floor_division() --> Finished
+11. reciprocal() --> Finished
+12. parts_using_percentage() --> Finished
+13. percentage_using_parts() --> Finished
 '''
 
 #---------------------------------------------------------------------------------------
@@ -90,7 +91,7 @@ def divide(dividend, *divisors):
 #---------------------------------------------------------------------------------------
 
 '''
-Function 4 - The Power Function
+Function 5 - The Power Function
 Base - The number being multiplied by itself
 Exponent - The number that tells how many times the base is multiplied by itself
 '''
@@ -106,7 +107,7 @@ def power(base, *exponents):
 #---------------------------------------------------------------------------------------
 
 '''
-Function 5 - The Root Function
+Function 6 - The Root Function
 Radicand (x) - The number inside the radical
 Index (n) - Tells us which root to take
 Radicand's Power (m) - The power of the radicand while it is under the root
@@ -123,7 +124,7 @@ def root(radicand, m, index):
 #---------------------------------------------------------------------------------------
 
 '''
-Function 6 - The Absolute Value Function
+Function 7 - The Absolute Value Function
 The absolute value is the distance a number is from 0 on a number line
 The absolute value of 5 and -5 for example would be 5 regardless
 '''
@@ -149,7 +150,7 @@ def absolute_value(num):
 #---------------------------------------------------------------------------------------
 
 '''
-Function 7 - The Remainder Function
+Functions 8 and 9 - The Remainder Function
 The Remainder is the left over result from division
 Example: 17 / 5 = 3 Whole Groups of 5 with a Remainder 2
 We subtract the divisor from the dividend untill we get a number less than the divisor
@@ -200,3 +201,78 @@ def remainder_c2(num1, num2):
     remainder_value = num1 - (num2 * floor)
 
     return remainder_value
+
+#---------------------------------------------------------------------------------------
+
+'''
+Function 10 - The Floor Division Function
+Floor Division is where the result of the division of two numbers is rounded down
+to the nearest integer (toward negative infinity). Floor division is useful for finding 
+how many complete groups fit into a quantity, without counting a partial group.
+'''
+
+def floor_division(num1, num2): # Example: 4.7 (Becomes 4), -4.7 (Becomes -5)
+    # Divide num1 and num2 to get result
+    # round result down to nearest integer
+    # return rounded down result
+
+    if num2 == 0:
+        return "Undefined"
+    else:
+        result = divide(num1, num2) 
+        floor_result = int(result) # Example: 4.7 (Becomes 4), -4.7 (Becomes -4)
+        # Positive numbers rounded down using type conversion int()
+        if floor_result > result:
+            floor_result -= 1
+            return floor_result
+        else:
+            return floor_result
+
+#---------------------------------------------------------------------------------------
+
+'''
+Function 11 - The Reciprocal Function
+The Reciprocal is also known as the multiplicative inverse. It is the number that, when 
+multiplied by the original number, produces 1. For a fraction, its reciprocal is found by 
+switching the positions of the numerator and denominator. However, a more universal way 
+to do it for different values is to divide 1 by the given value to get the reciprocal. 
+
+Example: Whole Number = 4 = 4/1 --> 1 / (4/1) = 1/4 --> 4/1 * 1/4 = 4/4 = 1
+Example: Fraction = 3/2 --> 1 / (3/2) = 1/1 * 2/3 = 2/3 --> 3/2 * 2/3 = 6/6 = 1
+Example: Decimals = (1/4 = 0.25) --> (1 / 0.25) = (1 / (1/4)) --> 1 / 0.25 = 4 
+
+Zero has no reciprocal
+'''
+
+def reciprocal(original_num):
+    if original_num == 0:
+        return "Undefined | 0 has no reciprocal"
+    else:
+        reciprocal_num = 1 / original_num
+
+    return reciprocal_num
+
+#---------------------------------------------------------------------------------------
+
+'''
+Functions 12 and 13 - The Percentage Functions
+Percentage / Percent - A way to express a part of a whole as a fraction out of 100. For example, 
+20% means 20 out of 100.
+
+Whole - Original Amount
+Percentage - How many parts out of 100
+Part - The resulting amount
+
+Part = (Percentage / 100) * Whole
+Percentage = (Part / Whole) * 100 --> Won't work if the whole number is zero
+'''
+
+def part_using_percentage(whole_num, percentage):
+    part = (percentage / 100) * whole_num
+    return part
+
+def percentage_using_part(whole_num, part):
+    if whole_num == 0:
+        return "Undefined | The whole amount cannot be zero"
+    percentage = (part / whole_num) * 100
+    return percentage
