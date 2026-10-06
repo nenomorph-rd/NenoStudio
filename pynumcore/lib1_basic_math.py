@@ -16,8 +16,8 @@ Functions contained in this library:
 9. remainder_c2() --> Finished
 10. floor_division() --> Finished
 11. reciprocal() --> Finished
-12. parts_using_percentage() --> Finished
-13. percentage_using_parts() --> Finished
+12. part_using_percentage() --> Finished
+13. percentage_using_part() --> Finished
 '''
 
 #---------------------------------------------------------------------------------------
